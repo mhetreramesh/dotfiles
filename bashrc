@@ -131,62 +131,48 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias ccc='clear'
-alias live='export DEPLOYMENT=vagrant/deployment/live.yml'
-alias vssh='vagrant ssh'
-alias vup='vagrant up'
-alias vdes='vagrant destroy'
-alias vrel='vagrant reload'
-alias vhal='vagrant halt'
-alias vst='vagrant status'
-alias work='cd /sysops/infrastructure'
-alias work1='cd /home/mum/Downloads/infrastructure/'
-alias gst="git status"
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias gl="git log"
-alias gcm="git commit"
-alias gco="git checkout"
-alias gcob="git checkout -b"
-alias gfet='git fetch'
-alias greb='git rebase -i origin/master'
-alias gfp='git push -f'
-alias gp='git push'
+
+# ----------------------
+# Git Aliases
+# ----------------------
+alias ga='git add'
+alias gaa='git add .'
+alias gaaa='git add --all'
+alias gau='git add --update'
 alias gb='git branch'
+alias gbd='git branch --delete '
+alias gc='git commit'
+alias gcm='git commit --message'
+alias gcf='git commit --fixup'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcom='git checkout master'
+alias gcos='git checkout staging'
+alias gcod='git checkout develop'
+alias gd='git diff'
+alias gda='git diff HEAD'
+alias gi='git init'
+alias glg='git log --graph --oneline --decorate --all'
+alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
+alias gm='git merge --no-ff'
+alias gma='git merge --abort'
+alias gmc='git merge --continue'
+alias gp='git pull'
+alias gpr='git pull --rebase'
+alias gr='git rebase'
+alias gs='git status'
+alias gss='git status --short'
+alias gst='git stash'
+alias gsta='git stash apply'
+alias gstd='git stash drop'
 alias gstl='git stash list'
 alias gstp='git stash pop'
-alias gollf='git log --name-only --pretty=oneline --full-index'
+alias gsts='git stash save'
+alias ggp='git push --all'
+
 sai() {
 sudo apt install $@
 
-}
-vssht1() {
-export DEPLOYMENT=vagrant/deployment/live.yml
-vagrant up transfer-01-01.develop.sys.tradebyte.com
-vagrant ssh transfer-01-01.develop.sys.tradebyte.com
-}
-
-vsshe1() {
-export DEPLOYMENT=vagrant/deployment/live.yml
-vagrant up elasticsearch-01-01.develop.sys.tradebyte.com
-vagrant ssh elasticsearch-01-01.develop.sys.tradebyte.com
-}
-
-vsshk1() {
-export DEPLOYMENT=vagrant/deployment/live.yml
-vagrant up kibana-01-01.develop.sys.tradebyte.com
-vagrant ssh kibana-01-01.develop.sys.tradebyte.com
-}
-
-vsshg1() {
-export DEPLOYMENT=vagrant/deployment/live.yml
-vagrant up gruft-01-01.develop.sys.tradebyte.com
-vagrant ssh gruft-01-01.develop.sys.tradebyte.com
-}
-
-vsshn1() {
-export DEPLOYMENT=vagrant/deployment/live.yml
-vagrant up nfs-01-01.develop.sys.tradebyte.com
-vagrant ssh nfs-01-01.develop.sys.tradebyte.com
 }
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -279,6 +265,8 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;35m'
 alias my='mycli --login-path'
+
+alias pbcopy='xclip -selection clipboard'
 
 complete -C /usr/local/bin/terraform terraform
 

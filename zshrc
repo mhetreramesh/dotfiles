@@ -200,8 +200,8 @@ colorls --gs -tA --dark $@
 }
 
 ghub() {
-git config --local user.name "mustafa89"
-git config --local user.email "mustafa.mujahid@outlook.com"
+git config --local user.name "Ramesh Mhetre"
+git config --local user.email "mhetreramesh@gmail.com"
 }
 
 gitcp() {

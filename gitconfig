@@ -2,8 +2,8 @@
 [core]
 	editor = nvim
 [user]
-	name = Mustafa Mujahid
-	email = mustafa.mujahid@tradebyte.com
+	name = Ramesh Mhetre
+	email = ramesh.mhetre@tradebyte.com
 [alias]
 	st = status
 	co = checkout
